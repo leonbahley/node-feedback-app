@@ -1,8 +1,6 @@
-// const { nanoid } = require("nanoid");
 const Suggestion = require("../../models/suggestion.model");
 
 const createParentComment = async (req, res, next) => {
-  //   const commentId = nanoid();
   const { comment, id, commentId } = req.body;
   const result = await Suggestion.updateOne(
     { _id: id },

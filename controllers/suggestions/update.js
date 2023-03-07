@@ -5,7 +5,7 @@ const update = async (req, res, next) => {
 
   const { suggestionId } = req.params;
 
-  const result = await Suggestion.updateOne(
+  const result = await Suggestion.findOneAndUpdate(
     { _id: suggestionId },
     { title, category, detail, status },
     { new: true }
